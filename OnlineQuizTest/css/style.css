@@ -1,0 +1,127 @@
+html{scroll-behavior: smooth;}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: #f8f9fa;
+}
+.alert{margin-top: 10px}
+.navbar{
+    z-index: 9999;
+}
+.main{
+    width: 100%;
+    height: auto;
+    padding-bottom: 74px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.section2{
+    height: 90vh;
+    padding: 0px 0 100px 0;
+}
+.logo{
+    letter-spacing: 3px;
+}
+.main-heading,
+.slogan{
+    pointer-events: none;
+}
+.slogan{
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+li a{
+    font-size: 13.5px;
+    margin: 0 4px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.nav-item{
+    position: relative;
+}
+.nav-item:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background: none;
+    border-top: 0px solid #333;
+    border-left: 0px solid #333;
+    transition: .3s;
+    z-index: -1;
+   
+}
+.nav-item:after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    background: none;
+    border-bottom: 0px solid #333;
+    border-right: 0px solid #333;
+    transition: .3s;
+    z-index: -1;
+}
+.nav-item:hover:before{
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #333;
+    border-left: 1px solid #333;
+}
+.nav-item:hover:after{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+}
+.form{
+    background-color: rgba(255,255,255,.7);
+    border-radius: 4px;
+}
+.center{
+    margin: 0 auto;
+}
+hr{
+    width: 80%;
+    margin: 40px auto;
+}
+.greet{
+    animation: animate 1s ease forwards;
+    animation-delay: .2s;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+        letter-spacing: 2px;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 568px){
+    .main-heading{
+        font-size: 24px;
+    }
+    .slogan{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
